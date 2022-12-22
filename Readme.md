@@ -5,7 +5,7 @@
 
 #### Download Expo Go and scan the QR code to get started.
 
-https://snack.expo.dev/@viner/fb50f7
+https://snack.expo.dev/@viner/array-rasp-navigation
 
 <p float="left">
 	<img src="https://i.postimg.cc/XNH28Nty/array-rasp-navigation.png" width="300" height="650">
