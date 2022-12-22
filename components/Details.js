@@ -57,7 +57,7 @@ const DetailsScreen = () => {
   return (
     <SafeAreaView style={styles.saveAreaViewContainer}>
       <StatusBar backgroundColor="#FFF" barStyle="dark-content" />
-      <View style={styles.dropdownsRow}>
+      <View>
         <ScrollView>
           <View>
             {data &&

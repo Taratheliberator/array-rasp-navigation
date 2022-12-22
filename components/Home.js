@@ -38,7 +38,7 @@ const HomeScreen = ({ navigation }) => {
         {
           method: 'get',
           headers: new Headers({
-            Authorization: 'Basic ' + '0JDQtNC80LjQvdC40YHRgtGA0LDRgtC+0YA=', // логин Администратор, пароля нет. Использовал сайт https://www.base64decode.org/
+            Authorization: 'Basic ' + '0JDQtNC80LjQvdC40YHRgtGA0LDRgtC+0YA6MTIzMzIxMTAy', // логин Администратор, пароля нет. Использовал сайт https://www.base64decode.org/
             'Content-Type': 'application/x-www-form-urlencoded',
           }),
         },
@@ -95,81 +95,79 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.saveAreaViewContainer}>
-      <View style={styles.dropdownsRow}>
-        <StatusBar barStyle="light-content" />
-        <View style={{ backgroundColor: '#F8F8F8', padding: 20, borderRadius: 15 }}>
-          <Dropdown
-            style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
-            placeholderStyle={styles.placeholderStyle}
-            selectedTextStyle={styles.selectedTextStyle}
-            inputSearchStyle={styles.inputSearchStyle}
-            iconStyle={styles.iconStyle}
-            data={facultyData}
-            search
-            maxHeight={300}
-            labelField="label"
-            valueField="value"
-            placeholder={!isFocus ? 'Выберете факультет' : '...'}
-            searchPlaceholder="Поиск..."
-            value={faculty}
-            onFocus={() => setIsFocus(true)}
-            onBlur={() => setIsFocus(false)}
-            onChange={(item) => {
-              setFaculty(item.value);
-              handleGroup(item.value);
-              setFacultyName(item.label);
-              setIsFocus(false);
-            }}
-          />
-          <Dropdown
-            style={[styles.dropdown2, isFocus && { borderColor: 'blue' }]}
-            placeholderStyle={styles.placeholderStyle}
-            selectedTextStyle={styles.selectedTextStyle2}
-            inputSearchStyle={styles.inputSearchStyle}
-            iconStyle={styles.iconStyle}
-            data={groupData}
-            search
-            maxHeight={300}
-            labelField="label"
-            valueField="value"
-            placeholder={!isFocus ? 'Выберете группу' : '...'}
-            searchPlaceholder="Поиск..."
-            value={group}
-            onFocus={() => setIsFocus(true)}
-            onBlur={() => setIsFocus(false)}
-            onChange={(item) => {
-              setGroup(item.value);
-              //handleCity(faculty, item.value);
+      <StatusBar barStyle="light-content" />
+      <View style={{ backgroundColor: '#F8F8F8', padding: 20, borderRadius: 15 }}>
+        <Dropdown
+          style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+          placeholderStyle={styles.placeholderStyle}
+          selectedTextStyle={styles.selectedTextStyle}
+          inputSearchStyle={styles.inputSearchStyle}
+          iconStyle={styles.iconStyle}
+          data={facultyData}
+          search
+          maxHeight={300}
+          labelField="label"
+          valueField="value"
+          placeholder={!isFocus ? 'Выберете факультет' : '...'}
+          searchPlaceholder="Поиск..."
+          value={faculty}
+          onFocus={() => setIsFocus(true)}
+          onBlur={() => setIsFocus(false)}
+          onChange={(item) => {
+            setFaculty(item.value);
+            handleGroup(item.value);
+            setFacultyName(item.label);
+            setIsFocus(false);
+          }}
+        />
+        <Dropdown
+          style={[styles.dropdown2, isFocus && { borderColor: 'blue' }]}
+          placeholderStyle={styles.placeholderStyle}
+          selectedTextStyle={styles.selectedTextStyle2}
+          inputSearchStyle={styles.inputSearchStyle}
+          iconStyle={styles.iconStyle}
+          data={groupData}
+          search
+          maxHeight={300}
+          labelField="label"
+          valueField="value"
+          placeholder={!isFocus ? 'Выберете группу' : '...'}
+          searchPlaceholder="Поиск..."
+          value={group}
+          onFocus={() => setIsFocus(true)}
+          onBlur={() => setIsFocus(false)}
+          onChange={(item) => {
+            setGroup(item.value);
+            //handleCity(faculty, item.value);
 
-              setGroupName(item.label);
-              // handleRasp(facultyName, item.label);
-              console.log(facultyName, item.label);
-              setIsFocus(false);
-            }}
-          />
+            setGroupName(item.label);
+            // handleRasp(facultyName, item.label);
+            console.log(facultyName, item.label);
+            setIsFocus(false);
+          }}
+        />
 
-          <TouchableOpacity
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#0F3460',
+            padding: 20,
+            borderRadius: 15,
+            alignItems: 'center',
+          }}
+          onPress={() => {
+            handleRasp(facultyName, groupName);
+
+            console.log(facultyName, groupName); //handleCity();
+          }}>
+          <Text
             style={{
-              backgroundColor: '#0F3460',
-              padding: 20,
-              borderRadius: 15,
-              alignItems: 'center',
-            }}
-            onPress={() => {
-              handleRasp(facultyName, groupName);
-
-              console.log(facultyName, groupName); //handleCity();
+              color: '#fff',
+              textTransform: 'uppercase',
+              fontWeight: '400',
             }}>
-            <Text
-              style={{
-                color: '#fff',
-                textTransform: 'uppercase',
-                fontWeight: '400',
-              }}>
-              Подтвердить
-            </Text>
-          </TouchableOpacity>
-        </View>
+            Подтвердить
+          </Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
