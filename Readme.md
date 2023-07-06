@@ -1,9 +1,6 @@
 1С формирует список факультетов и групп на локальном сервере, также на локальном сервере по выбранному факультету и группе
 по адресу http://.../asr/hs/RaspTest/GetFacult формируется расписание для конкретной выбранной группы
 
-## Expo
-
-#### Download Expo Go and scan the QR code to get started.
 
 <!---https://snack.expo.dev/@viner/array-rasp-navigation-external-->
 <p float="left">
