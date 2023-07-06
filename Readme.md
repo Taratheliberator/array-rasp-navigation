@@ -4,13 +4,10 @@
 
 #### Download Expo Go and scan the QR code to get started.
 
-<!---https://snack.expo.dev/@viner/array-rasp-navigation-external
+https://snack.expo.dev/@viner/array-rasp-navigation-external 
 <p float="left">
 	<img src="https://i.postimg.cc/XNH28Nty/array-rasp-navigation.png" width="300" height="650">
 	<img src="https://i.postimg.cc/mrVZD6gM/array-rasp-navigation2.png" width="300" height="650">
 </p>
--->
-<p float="left">
-	<img src="https://i.postimg.cc/XNH28Nty/array-rasp-navigation.png" width="300" height="650" style="vertical-align: middle;">
-	<img src="https://i.postimg.cc/mrVZD6gM/array-rasp-navigation2.png" width="300" height="650" style="vertical-align: middle;">
-</p>
+
+
